@@ -1,48 +1,47 @@
 /* А тут CSS */
-body{
+body {
   font-family: serif;
   color: white;
-  margin: 0px;
-  padding: 0px;
-  
-  }
-  
-  .left{
+  margin: 0;
+  padding: 0;
+}
+
+.left {
   display: inline-block;
   position: absolute;
-  left: 60px;
+  left: 20px;
   top: 20px;
-  }
-  
-  .left img{
+}
+
+.left img {
   width: 150px;
-  height: 110;
-  
-  }
-  
-  .mid{
-  display: block;
-  width: 37%;
-  margin: 30px auto;
-  
-  }
-  .navbar{
+}
+
+.mid {
   display: inline-block;
-  
-  }
-  .navbar li{
+  margin: 30px 0 30px 200px; /* Added left margin to create space for the logo */
+}
+
+.navbar {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
   display: inline-block;
   font-size: 19px;
-  }
-  .navbar li a{
+}
+
+.navbar li a {
   color: black;
   text-decoration: none;
   padding: 30px 20px;
-  
-  }
-  .right{
+}
+
+.right {
   position: absolute;
-  right: 34px;
-  top: 45px;
+  top: 20px;
+  right: 20px;
   display: inline-block;
-  }
+}
