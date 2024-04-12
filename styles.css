@@ -1,4 +1,20 @@
 /* А тут CSS */
+/* Desktop styles */
+.some-element {
+  width: 50%; /* Example width */
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .some-element {
+      width: 100%; /* Adjusted width for mobile */
+  }
+}
+<style>
+h1 {
+    color: blue;
+}
+</style>
 body {
   font-family: serif;
   color: white;
