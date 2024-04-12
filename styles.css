@@ -10,11 +10,15 @@
       width: 100%; /* Adjusted width for mobile */
   }
 }
-<style>
-h1 {
-    color: blue;
+/* Custom styles for the image */
+.image img {
+  width: 90%; /* Adjust the width of the image */
+  height: auto; /* Maintain aspect ratio */
 }
-</style>
+h1 {
+    color: darkblue;
+}
+
 body {
   font-family: serif;
   color: white;
