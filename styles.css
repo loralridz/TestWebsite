@@ -7,19 +7,7 @@ h1 {
   color: darkblue;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
 
-/* Mobile styles */
-@media (max-width: 768px) {
-  .some-element {
-      width: 100%; /* Adjusted width for mobile */
-  }
-}
 /* Custom styles for the image */
 .image img {
   width: 90%; /* Adjust the width of the image */
@@ -78,43 +66,27 @@ a {
   color: #310080; /* Set the text color to dark blue */
   text-decoration: underline; /* Add underline to the link text */
 }
-/* Media query for smaller screens /
-@media only screen and (max-width: 768px) {
-.left, .mid {
-position: static; 
-text-align: center;
-margin: 0 auto; 
-width: 100%;
-}
+/* Mobile styles */
+@media (max-width: 768px) {
+  .left img {
+      width: 100%; /* Make the logo responsive */
+      max-width: 150px; /* Set max-width for better scaling */
+  }
 
-.left img {
-width: 100%; 
-max-width: 200px; 
-}
+  .mid {
+      margin: 20px 0; /* Adjust margin for better spacing */
+  }
 
-.mid {
-margin-top: 20px;
-}
+  .navbar {
+      text-align: center; /* Center align the navigation */
+  }
 
-.navbar {
-text-align: center; 
-display: block; 
-}
+  .navbar li {
+      display: block;
+      margin: 10px 0; /* Adjust margin for better spacing */
+  }
 
-.navbar li {
-display: block; /* Display list items as block for stacking /
-margin-bottom: 10px; 
+  .right {
+      text-align: center; /* Center align the buttons */
+  }
 }
-
-.navbar li a {
-display: block; 
-padding: 10px; 
-}
-
-.right {
-position: static; /* Remove absolute positioning for smaller screens /
-text-align: center; 
-margin-top: 20px; 
-}
-}
-
