@@ -70,3 +70,43 @@ a {
   color: #310080; /* Set the text color to dark blue */
   text-decoration: underline; /* Add underline to the link text */
 }
+/* Media query for smaller screens /
+@media only screen and (max-width: 768px) {
+.left, .mid {
+position: static; 
+text-align: center;
+margin: 0 auto; 
+width: 100%;
+}
+
+.left img {
+width: 100%; 
+max-width: 200px; 
+}
+
+.mid {
+margin-top: 20px;
+}
+
+.navbar {
+text-align: center; 
+display: block; 
+}
+
+.navbar li {
+display: block; /* Display list items as block for stacking /
+margin-bottom: 10px; 
+}
+
+.navbar li a {
+display: block; 
+padding: 10px; 
+}
+
+.right {
+position: static; /* Remove absolute positioning for smaller screens /
+text-align: center; 
+margin-top: 20px; 
+}
+}
+
