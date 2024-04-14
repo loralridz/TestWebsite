@@ -68,25 +68,44 @@ a {
 }
 /* Mobile styles */
 @media (max-width: 768px) {
+  #app {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .header {
+    display: block;
+  }
+
+  .left {
+    width: 100%;
+    text-align: center;
+  }
+
   .left img {
-      width: 100%; /* Make the logo responsive */
-      max-width: 150px; /* Set max-width for better scaling */
+    max-width: 150px;
+    margin: 0 auto;
   }
 
   .mid {
-      margin: 20px 0; /* Adjust margin for better spacing */
+    width: 100%;
+    margin: 20px 0;
   }
 
-  .navbar {
-      text-align: center; /* Center align the navigation */
+  .mid img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
   }
 
-  .navbar li {
-      display: block;
-      margin: 10px 0; /* Adjust margin for better spacing */
+  .mid p {
+    text-align: center;
   }
 
-  .right {
-      text-align: center; /* Center align the buttons */
+  .mid a {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
   }
 }
