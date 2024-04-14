@@ -65,7 +65,8 @@ a {
   font-weight: bold; /* Set the font weight to bold */
   color: #310080; /* Set the text color to dark blue */
   text-decoration: underline; /* Add underline to the link text */
-  /* Mobile styles */
+  
+/* Mobile styles */
 @media (max-width: 768px) {
   #app {
     width: 100%;
@@ -108,12 +109,36 @@ a {
     margin: 10px 0;
   }
 
-  .navbar li a {
-    font-size: 16px; /* Increased font size */
-    padding: 5px 10px; /* Reduced padding */
+  .navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  .navbar li {
+    margin: 0 10px;
+  }
+  
+  @media (max-width: 600px) {
+    .navbar li {
+      margin: 10px 0;
+    }
+    
+    .navbar ul {
+      flex-wrap: wrap;
+    }
   }
 
   .image {
     width: 100%; /* Full-width on mobile devices */
   }
+
 }
