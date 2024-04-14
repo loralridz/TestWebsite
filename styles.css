@@ -40,7 +40,7 @@ body {
 
 .navbar {
   display: inline-block;
-  margin: 0;
+  margin: 10;
   padding: 0;
 }
 
@@ -66,7 +66,10 @@ a {
   color: #310080; /* Set the text color to dark blue */
   text-decoration: underline; /* Add underline to the link text */
   
+
+  
 /* Mobile styles */
+
 @media (max-width: 768px) {
   #app {
     width: 100%;
@@ -114,28 +117,31 @@ a {
     flex-wrap: nowrap;
     justify-content: space-between;
   }
-  
+  @media (max-width: 768px) {
+    /* Adjustments for mobile devices */
+    
+    .navbar li {
+      margin: 300px 0; /* Increase the vertical space between items */
+    }
+
   .navbar ul {
     list-style: none;
-    margin: 0;
+    margin: 300;
     padding: 0;
     display: flex;
     flex-wrap: nowrap;
   }
-  
-  .navbar li {
-    margin: 0 10px;
-  }
-  
+
   @media (max-width: 600px) {
     .navbar li {
-      margin: 10px 0;
+      margin: 300px 0; /* Further adjust the spacing if needed */
     }
-    
+
     .navbar ul {
       flex-wrap: wrap;
     }
   }
+}
 
   .image {
     width: 100%; /* Full-width on mobile devices */
