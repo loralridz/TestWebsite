@@ -5,6 +5,9 @@
 }
 h1 {
   color: darkblue;
+  font-size: 36 px;
+  font-weight: bold;
+  
 }
 
 
@@ -61,6 +64,14 @@ body {
   right: 20px;
   display: inline-block;
 }
+
+.footer {
+  background-color: #333; /* Background color */
+  color: rgb(174, 30, 90); /* Text color */
+  padding: 20px; /* Padding around the content */
+  text-align: center; /* Center-align the content */
+}
+
 a {
   font-weight: bold; /* Set the font weight to bold */
   color: #310080; /* Set the text color to dark blue */
