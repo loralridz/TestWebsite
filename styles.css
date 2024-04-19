@@ -64,6 +64,21 @@ body {
   right: 20px;
   display: inline-block;
 }
+.meta-description-container {
+  max-width: 800px; /* Adjust the maximum width as needed */
+  margin: 20px 20px; /* Center the container horizontally */
+  padding: 20px; /* Add padding for spacing */
+}
+
+.meta-description {
+  margin-top: 20px; /* Add some space above the meta description */
+  font-family: Arial, sans-serif; /* Use the same font family */
+  font-size: 16px; /* Adjust the font size */
+  line-height: 1.5; /* Set the line height for better readability */
+  color: #333; /* Set the text color */
+  font-weight: bold; /* Make the font bold */
+  text-align: justify; /* Align the text */
+}
 
 .footer {
   background-color: #333; /* Background color */
