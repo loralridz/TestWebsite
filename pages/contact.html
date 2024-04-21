@@ -1,100 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Let's Collaborate</title>
-    <link rel="stylesheet" href="../styles.css">
-    <!-- <div class="left">
-         <img src="assets/logo.jpg" alt="Logo">	 
-        
-    </div> -->
-    <style> /* General Styles */ 
-        body { font-family: Arial, sans-serif; /* Choose a modern and readable font */ 
-          line-height: 1.6; /* Line height for better readability */
-           margin: 0; padding: 0; background-color: #f5f5f5; /* Soft background color */
-            color: #333; /* Dark gray text color for readability */ 
-            text-align: start; }
-      /* Container for main content */
-      .container {
-          width: 80%; /* Adjust width as needed */
-          margin: 20px auto; /* Center the content with top and bottom margin */
-          background-color: #fff; /* White background for the content */
-          padding: 20px; /* Padding for space inside the container */
-          border-radius: 8px; /* Rounded corners */
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-      }
-  
-      /* Headings */
-      h2 {
-          color: white; /* Dark blue color for headings */
-          font-size: 24px;
-          margin-bottom: 15px; /* Bottom margin for spacing */
-          background-color: gray;
-      }
-  
-      /* Paragraphs */
-      p {
-          margin-bottom: 15px; /* Bottom margin between paragraphs */
-      }
-  
-      /* Links */
-      a {
-          color: white;/* Blue color for links */
-          text-decoration: none;
-     ;
-  
-      }
-  
-      a:hover {
-          text-decoration: underline; /* Underline links on hover */
-      }
-  
-      /* Styled link in the paragraph */
-      .container a {
-          display: inline-block; /* Display as an inline-block element */
-          padding: 8px 12px; /* Padding for the link */
-          background-color: gray; /* Light blue background for the link */
-          border-radius: 5px; /* Rounded corners for the link */
-          font-weight: bold;
-      }
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
 
-    .image-container {
-    margin: 20px auto; /* Adjust margin as needed */
-    max-width: 80%; /* Adjust max-width as needed */
-}
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
 
 
-.mid img {
-    width: 100%;
-    display: block;
-}
+        /* Container */
+        .container {
+            background-color: white;
+            padding: 53px 60px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
 
-  
-  </style>
+
+        /* Form header */
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+
+        /* Form group */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+
+        /* Labels */
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+
+        /* Input fields and textarea */
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+
+        /* Focus styles */
+        input:focus,
+        textarea:focus {
+            border-color: #007bff;
+        }
+
+
+        /* Textarea */
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+
+        /* Submit button */
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
-<body>
-    <div class="left">
-        <!-- <img src="assets/logo.jpg" alt="Logo">	  -->
-        <img src="assets/logo.jpg" alt="Logo: Hexagonal logo for PATH HIVE People at the heart of project" style="position: relative; top: 10px; left: 10px; width: 160px; height: 125px;" />
-   </div>
-                
-                <div class="image">
-                    <!-- <img src="assets/imageforcontactpage.png" alt="Photo of a three people sitting and chatting" style="margin-left: 200px; max-width: 80%;"/>  -->
-                    <img src="assets/imageforcontactpage.png" alt="Photo of three people sitting and chatting" style="margin-left: 200px; max-width: 80%; margin-top: 20px;">
 
-               </div>
+
+<body>
+    <div>
+        <div class="mid">
+            <img src="assets/websitepage2pic1.png" alt="Image">
+            <div>
                 <hr>
-                <div class="container"> 
-                    <p>Dr. Ashraf Bocktor </p>
-                    <p>a.bocktor@cnppms.co.uk</p>
-                    <p> Consortium Lead <a draggable="true" href="https://www.linkedin.com/in/abbocktor/"> This is my LinkedIn profile </a> 
-                               
-                    
+                <div class="container">
+                    <h1>Contact Us</h1>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="from_name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="Your email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject:</label>
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" placeholder="Your message" required></textarea>
+                        </div>
+
+                        <button type="submit" onclick="oncontact()">Submit
+
+                        </button>
+                    </form>
                 </div>
-            
-                <footer class ="footer">
-                    <p>PATH-HIVE | TRANSFORMING ORGANIZATIONS</p>
+
+
+                <div>
+                    <p>Dr. Ashraf Bocktor is the owner of Clear and Pragmatic Project Management Solutions, a small
+                        limited company.</p>
+                    <a
+                        href="assets/Copy of Pitch The Project Economy_ An opportunity for Managers, Leaders and Entry Levels.pptx">View
+                        PowerPoint Presentation</a>
+
+                </div>
+                <footer>
+                    <div class="right">
+                        <img src="assets/path-hive-logo-small copy.jpg">
+                    </div>
+                    <h2>PATH-HIVE People at the heart of Projects</h2>
                 </footer>
+                <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+                <script type="text/javascript">
+                    (function () {
+                        emailjs.init("_zqfXGikzWef0drEB");
+                    })();
+                </script>
+                <script>
+                    // function oncontact() {
+                    //     alert("Test1")
+                    //     emailjs.sendForm('service_kf4cukb', 'service_kf4cukb', this)
+                    //         .then(function () {
+                    //             console.log('SUCCESS!');
+                    //             alert('Email successfully sent!');
+                    //         }, function (error) {
+                    //             console.log('FAILED...', error);
+                    //             alert('Failed to send email.');
+                    //         });
+                    // }
+                    document.getElementById('contactForm').addEventListener('submit', function (event) {
+                        event.preventDefault();
+
+                        emailjs.sendForm('service_kf4cukb', 'template_gyvc01j', this)
+                            .then(function () {
+                                console.log('SUCCESS!');
+                                alert('Email successfully sent!');
+                            }, function (error) {
+                                console.log('FAILED...', error);
+                                alert('Failed to send email.');
+                            });
+                    });
+                </script>
+
 </body>
+
 </html>
