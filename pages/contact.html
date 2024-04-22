@@ -21,14 +21,29 @@
 
 
         /* Container */
-        .container {
-            background-color: white;
-            padding: 53px 60px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            width: 100%;
+        .paragraph-container {
+    background-color: #3333330f;
+    color: rgb(174, 30, 90); /* Text color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Add some margin between containers */
         }
+
+        .form-container {
+        /* .container { */
+            background-color: rgb(44, 153, 175);
+            padding: 15px 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            /* Center the container horizontally */
+            max-width: 300px;
+            width: 100%;
+            margin: 0 auto;
+            /* Center the container horizontally */
+        }
+
 
 
         /* Form header */
@@ -36,6 +51,8 @@
             text-align: center;
             margin-bottom: 20px;
             color: #333;
+            font-size: 24px;
+            /* Reduce font size for the heading */
         }
 
 
@@ -51,6 +68,8 @@
             margin-bottom: 5px;
             font-weight: bold;
             color: #555;
+            font-size: 16px;
+            /* Reduce font size for labels */
         }
 
 
@@ -59,11 +78,13 @@
         input[type="email"],
         textarea {
             width: 100%;
-            padding: 10px;
+            padding: 8px;
             border: 1px solid #ccc;
             border-radius: 5px;
             outline: none;
             transition: border-color 0.3s;
+            font-size: 16px;
+            /* Reduce font size for input fields */
         }
 
 
@@ -76,7 +97,7 @@
 
         /* Textarea */
         textarea {
-            height: 120px;
+            height: 100px;
             resize: vertical;
         }
 
@@ -92,6 +113,8 @@
             cursor: pointer;
             transition: background-color 0.3s;
             font-weight: bold;
+            font-size: 16px;
+            /* Reduce font size for button */
         }
 
 
@@ -112,14 +135,19 @@
         </div>
 
         <div class="image">
-            <!-- <img src="assets/imageforcontactpage.png" alt="Photo of a three people sitting and chatting" style="margin-left: 200px; max-width: 80%;"/>  -->
-            <img src="assets/imageforcontactpage.png" alt="Photo of three people sitting and chatting"
+            <!-- <img src="assets/imageforcontactpage.png" alt="Photo of a three people sitting and chatting" style="margin-left: 200px; max-width: 80%;"/>  --> -->
+             <img src="assets/imageforcontactpage.png" alt="Photo of three people sitting and chatting"
                 style="margin-left: 200px; max-width: 80%; margin-top: 20px;">
-
+                <img src="assets/imageforcontactpage.png" alt="Photo of three people sitting and chatting"
+                style="margin-left: 200px; max-width: 80%; margin-top: 20px;">   
+<!-- 
         </div>
+         <div class="top-photo">
+        <img src="assets/imageforcontactpage.png" alt="Photo of three people sitting and chatting">
+    </div> -->
         <hr>
-        
-        <div class="container">
+        <div class="container form-container">
+            <!-- <div class="container"> -->
             <h1>Contact Us</h1>
             <form id="contactForm">
                 <div class="form-group">
@@ -146,18 +174,19 @@
                 </button>
             </form>
         </div>
+        <hr>
 
-        <div class="container"> 
+            <div class="container paragraph-container">
+            <!-- <div class="container">  -->
             <p>Dr. Ashraf Bocktor </p>
             <p>a.bocktor@cnppms.co.uk</p>
-            <p> Consortium Lead <a draggable="true" href="https://www.linkedin.com/in/abbocktor/"> This is my LinkedIn profile </a> 
-                       
-            
+            <p> Consortium Lead <a draggable="true" href="https://www.linkedin.com/in/abbocktor/"> This is my LinkedIn
+                    profile </a>
+
         </div>
 
-       
-        <footer>
-            <h2>PATH-HIVE People at the heart of Projects</h2>
+        <footer class="footer">
+            <p>PATH-HIVE | TRANSFORMING ORGANIZATIONS</p>
         </footer>
         <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
         <script type="text/javascript">
