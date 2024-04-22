@@ -22,16 +22,18 @@
 
         /* Container */
         .paragraph-container {
-    background-color: #3333330f;
-    color: rgb(174, 30, 90); /* Text color */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Add some margin between containers */
+            background-color: #3333330f;
+            color: rgb(174, 30, 90);
+            /* Text color */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            /* Add some margin between containers */
         }
 
         .form-container {
-        /* .container { */
+            /* .container { */
             background-color: rgb(44, 153, 175);
             padding: 15px 50px;
             border-radius: 8px;
@@ -135,90 +137,93 @@
         </div>
 
         <div class="image">
-            <!-- <img src="assets/imageforcontactpage.png" alt="Photo of a three people sitting and chatting" style="margin-left: 200px; max-width: 80%;"/>  --> -->
-             <img src="assets/imageforcontactpage.png" alt="Photo of three people sitting and chatting"
+            <!-- <img src="assets/imageforcontactpage.png" alt="Photo of a three people sitting and chatting" style="margin-left: 200px; max-width: 80%;"/>  -->
+            
+            <img src="assets/imageforcontactpage.png" alt="Photo of three people sitting and chatting"
                 style="margin-left: 200px; max-width: 80%; margin-top: 20px;">
-                <img src="assets/imageforcontactpage.png" alt="Photo of three people sitting and chatting"
-                style="margin-left: 200px; max-width: 80%; margin-top: 20px;">   
-<!-- 
+            <img src="assets/imageforcontactpage.png" alt="Photo of three people sitting and chatting"
+                style="margin-left: 200px; max-width: 80%; margin-top: 20px;">
+           
+            <!-- 
         </div>
          <div class="top-photo">
         <img src="assets/imageforcontactpage.png" alt="Photo of three people sitting and chatting">
     </div> -->
-        <hr>
-        <div class="container form-container">
-            <!-- <div class="container"> -->
-            <h1>Contact Us</h1>
-            <form id="contactForm">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="from_name" name="name" placeholder="Your name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Your email" required>
-                </div>
+            <hr>
+            <div class="container form-container">
+                <!-- <div class="container"> -->
+                <h1>Contact Us</h1>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="from_name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Your email" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="subject">Subject:</label>
-                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                </div>
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" placeholder="Your message" required></textarea>
-                </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" placeholder="Your message" required></textarea>
+                    </div>
 
-                <button type="submit" onclick="oncontact()">Submit
+                    <button type="submit" onclick="oncontact()">Submit
 
-                </button>
-            </form>
-        </div>
-        <hr>
+                    </button>
+                </form>
+            </div>
+            <hr>
 
             <div class="container paragraph-container">
-            <!-- <div class="container">  -->
-            <p>Dr. Ashraf Bocktor </p>
-            <p>a.bocktor@cnppms.co.uk</p>
-            <p> Consortium Lead <a draggable="true" href="https://www.linkedin.com/in/abbocktor/"> This is my LinkedIn
-                    profile </a>
+                <!-- <div class="container">  -->
+                <p>Dr. Ashraf Bocktor </p>
+                <p>a.bocktor@cnppms.co.uk</p>
+                <p> Consortium Lead <a draggable="true" href="https://www.linkedin.com/in/abbocktor/"> This is my
+                        LinkedIn
+                        profile </a>
 
-        </div>
+            </div>
 
-        <footer class="footer">
-            <p>PATH-HIVE | TRANSFORMING ORGANIZATIONS</p>
-        </footer>
-        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-        <script type="text/javascript">
-            (function () {
-                emailjs.init("_zqfXGikzWef0drEB");
-            })();
-        </script>
-        <script>
-            // function oncontact() {
-            //     alert("Test1")
-            //     emailjs.sendForm('service_kf4cukb', 'service_kf4cukb', this)
-            //         .then(function () {
-            //             console.log('SUCCESS!');
-            //             alert('Email successfully sent!');
-            //         }, function (error) {
-            //             console.log('FAILED...', error);
-            //             alert('Failed to send email.');
-            //         });
-            // }
-            document.getElementById('contactForm').addEventListener('submit', function (event) {
-                event.preventDefault();
+            <footer class="footer">
+                <p>PATH-HIVE | TRANSFORMING ORGANIZATIONS</p>
+            </footer>
+            <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+            <script type="text/javascript">
+                (function () {
+                    emailjs.init("_zqfXGikzWef0drEB");
+                })();
+            </script>
+            <script>
+                // function oncontact() {
+                //     alert("Test1")
+                //     emailjs.sendForm('service_kf4cukb', 'service_kf4cukb', this)
+                //         .then(function () {
+                //             console.log('SUCCESS!');
+                //             alert('Email successfully sent!');
+                //         }, function (error) {
+                //             console.log('FAILED...', error);
+                //             alert('Failed to send email.');
+                //         });
+                // }
+                document.getElementById('contactForm').addEventListener('submit', function (event) {
+                    event.preventDefault();
 
-                emailjs.sendForm('service_kf4cukb', 'template_gyvc01j', this)
-                    .then(function () {
-                        console.log('SUCCESS!');
-                        alert('Email successfully sent!');
-                    }, function (error) {
-                        console.log('FAILED...', error);
-                        alert('Failed to send email.');
-                    });
-            });
-        </script>
+                    emailjs.sendForm('service_kf4cukb', 'template_gyvc01j', this)
+                        .then(function () {
+                            console.log('SUCCESS!');
+                            alert('Email successfully sent!');
+                        }, function (error) {
+                            console.log('FAILED...', error);
+                            alert('Failed to send email.');
+                        });
+                });
+            </script>
 
 </body>
 
