@@ -130,6 +130,55 @@
             /* Add some margin for spacing */
             text-align: center;
         }
+
+        .box1 img:hover {
+            background-color: lightblue;
+            transform: scale(1.2);
+        }
+
+        /* Style for the modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Style for the modal content */
+        .modal-content {
+            background-color: rgb(245, 238, 238);
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 0px;
+            font-family: Arial, sans-serif;
+            /* Change the font family here */
+            font-size: 18px;
+            /* Change the font size here */
+            color: rgb(102, 11, 11);
+            /* Change the text color here */
+        }
+
+        /* Close button style */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -157,75 +206,132 @@
             impactful transformations. With a range of products designed to serve everyone in the organization, from the
             executive level to entry level, PATH-HIVE focuses on shaping mindsets, cultivating habits, and preparing
             organizations for the inevitable transition to a project-based economy.</p>
-
         <!-- Product boxes -->
-        <div class="container1">
-            <div class="row">
-                <div class="box1">
-                    <img src="assets/to-do-list.png">
-                    <p>PATH-HIVE Gold Workshop</p>
-                </div>
-                <div class="box1">
-                    <img src="assets/to-do-list.png">
-                    <p>PATH-HIVE Mini Workshop</p>
-                </div>
-                <div class="box1">
-                    <img src="assets/to-do-list.png">
-                    <p>PATH-HIVE Magic</p>
-                </div>
-            </div>
 
 
-            <!-- Add three more products in a new row below -->
-            <div class="row">
-                <div class="box1">
-                    <img src="assets/to-do-list.png">
-                    <p>PATH-HIVE Legacy</p>
-                </div>
-                <div class="box1">
-                    <img src="assets/to-do-list.png">
-                    <p>PATH-HIVE Team Dynamics</p>
-                </div>
-                <div class="box1">
-                    <img src="assets/to-do-list.png">
-                    <p>Executive Modern Leadership Mindset</p>
-                </div>
-            </div>
+    </div>
 
-            <!-- Add three more products in a new row below -->
-            <div class="row">
-                <div class="box1">
-                    <img src="assets/to-do-list.png">
-                    <p>PATH-HIVE Mindset Step by Step Change</p>
-                </div>
-                <div class="box1">
-                    <img src="assets/to-do-list.png">
-                    <p>PATH-HIVE Invest</p>
-                </div>
-                <div class="box1">
-                    <img src="assets/to-do-list.png">
-                    <p>PATH-HIVE Challenge</p>
-                </div>
+    <div class="container1">
+        <div class="row">
+            <div class="box1"
+                onclick="openModal('PATH-HIVE Gold Workshop', '3 months', '$100', 'Product 1 is a great product.', 'Product 1 benefits: Lorem ipsum dolor sit amet.')">
+                <img src="assets/to-do-list.png">
+                <p>PATH-HIVE Gold Workshop</p>
             </div>
-            <!-- Add three more products in a new row below -->
-            <div class="row">
-                <div class="box1">
-                    <img src="assets/to-do-list.png">
-                    <p>PATH-HIVE AI Innovate</p>
-                </div>
-                <div class="box1">
-                    <img src="assets/to-do-list.png">
-                    <p>PATH-HIVE Create Your Own Product</p>
-                </div>
-                <div class="box1">
-                    <img src="assets/to-do-list.png">
-                    <p>PATH-HIVE CM Maturity Assessment</p>
-                </div>
+            <div class="box1"
+                onclick="openModal('PATH-HIVE Mini Workshop', '6 months', '$200', 'Product 2 is an amazing product.', 'Product 2 benefits: consectetur adipiscing elit.')">
+                <img src="assets/to-do-list.png">
+                <p>PATH-HIVE Mini Workshop</p>
+            </div>
+            <div class="box1"
+                onclick="openModal('PATH-HIVE Magic', '12 months', '$300', 'Product 3 is a fantastic product.', 'Product 3 benefits: sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')">
+                <img src="assets/to-do-list.png">
+                <p>PATH-HIVE Magic</p>
             </div>
         </div>
-        <footer class ="footer">
-            <p>PATH-HIVE | TRANSFORMING ORGANIZATIONS</p>
-        </footer>
+        <div class="row">
+            <div class="box1"
+                onclick="openModal('PATH-HIVE Legacy', '3 months', '$150', 'Product 4 is an excellent product.', 'Product 4 benefits: Ut enim ad minim veniam.')">
+                <img src="assets/to-do-list.png">
+                <p>PATH-HIVE Legacy</p>
+            </div>
+            <div class="box1"
+                onclick="openModal('PATH-HIVE Team Dynamics', '6 months', '$250', 'Product 5 is a superb product.', 'Product 5 benefits: quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.')">
+                <img src="assets/to-do-list.png">
+                <p>PATH-HIVE Team Dynamics</p>
+            </div>
+            <div class="box1"
+                onclick="openModal('Executive Modern Leadership Mindset', '12 months', '$350', 'Product 6 is an awesome product.', 'Product 6 benefits: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.')">
+                <img src="assets/to-do-list.png">
+                <p>Executive Modern Leadership Mindset</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="box1"
+                onclick="openModal('PATH-HIVE Mindset Step by Step Change', '3 months', '$120', 'Product 7 is an incredible product.', 'Product 7 benefits: Excepteur sint occaecat cupidatat non proident.')">
+                <img src="assets/to-do-list.png">
+                <p>PATH-HIVE Mindset Step by Step Change</p>
+            </div>
+            <div class="box1"
+                onclick="openModal('PATH-HIVE Invest', '6 months', '$220', 'Product 8 is a phenomenal product.', 'Product 8 benefits: sunt in culpa qui officia deserunt mollit anim id est laborum.')">
+                <img src="assets/to-do-list.png">
+                <p>PATH-HIVE Invest</p>
+            </div>
+            <div class="box1"
+                onclick="openModal('PATH-HIVE Challenge', '12 months', '$320', 'Product 9 is a remarkable product.', 'Product 9 benefits: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')">
+                <img src="assets/to-do-list.png">
+                <p>PATH-HIVE Challenge</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="box1"
+                onclick="openModal('PATH-HIVE AI Innovate', '3 months', '$130', 'Product 10 is a marvelous product.', 'Product 10 benefits: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.')">
+                <img src="assets/to-do-list.png">
+                <p>PATH-HIVE AI Innovate</p>
+            </div>
+            <div class="box1"
+                onclick="openModal('PATH-HIVE Create Your Own Product', '6 months', '$230', 'Product 11 is an astonishing product.', 'Product 11 benefits: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.')">
+                <img src="assets/to-do-list.png">
+                <p>PATH-HIVE Create Your Own Product</p>
+            </div>
+            <div class="box1"
+                onclick="openModal('PATH-HIVE CM Maturity Assessment', '12 months', '$330', 'Product 12 is an extraordinary product.', 'Product 12 benefits: Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')">
+                <img src="assets/to-do-list.png">
+                <p>PATH-HIVE CM Maturity Assessment</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- The modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalProductName">Product Information</h2>
+            <p><strong>Duration:</strong> <span id="modalDuration"></span></p>
+            <p><strong>Price:</strong> <span id="modalPrice"></span></p>
+            <p><strong>Description:</strong> <span id="modalDescription"></span></p>
+            <p><strong>Benefits:</strong> <span id="modalBenefits"></span></p>
+            <p><a href="contact.html">Contact Us</a></p>
+            <p><a href="https://calendly.com/drbocktor/business-success-unveiling-the-path-methodology?month=2024-04">Book
+                    a Meeting</a></p>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Function to open the modal with specific product information
+        function openModal(name, duration, price, description, benefits) {
+            // Set the product information in the modal
+            document.getElementById("modalProductName").innerHTML = name;
+            document.getElementById("modalDuration").innerHTML = duration;
+            document.getElementById("modalPrice").innerHTML = price;
+            document.getElementById("modalDescription").innerHTML = description;
+            document.getElementById("modalBenefits").innerHTML = benefits;
+            // Display the modal
+            modal.style.display = "block";
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        // Close the modal when clicking outside of it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+
+<footer class="footer">
+    <p>PATH-HIVE | TRANSFORMING ORGANIZATIONS</p>
+</footer>
 </body>
 
 </html>
