@@ -146,6 +146,10 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
+            cursor: move;
+            /* Set cursor to move when hovering over the modal */
+            overflow: hidden;
+            /* Hide any content overflowing from the modal */
         }
 
         /* Style for the modal content */
@@ -163,21 +167,29 @@
             /* Change the font size here */
             color: rgb(102, 11, 11);
             /* Change the text color here */
+            overflow-y: auto;
+            /* Enable vertical scrolling */
         }
-        /* Style for the product name in the modal */
-    .modal-content h2 {
-        color: rgb(128, 51, 0); /* Change the color of the product name here */
-    }
-         /* Style for the links inside the modal content */
-    .modal-content a {
-        color: blue; /* Change the color of the links here */
-        text-decoration: underline; /* Add underline to the links */
-    }
 
-    /* Style for the links when hovered */
-    .modal-content a:hover {
-        color: darkblue; /* Change the color of the links on hover here */
-    }
+        /* Style for the product name in the modal */
+        .modal-content h2 {
+            color: rgb(128, 51, 0);
+            /* Change the color of the product name here */
+        }
+
+        /* Style for the links inside the modal content */
+        .modal-content a {
+            color: blue;
+            /* Change the color of the links here */
+            text-decoration: underline;
+            /* Add underline to the links */
+        }
+
+        /* Style for the links when hovered */
+        .modal-content a:hover {
+            color: darkblue;
+            /* Change the color of the links on hover here */
+        }
 
         /* Close button style */
         .close {
@@ -228,7 +240,7 @@
     <div class="container1">
         <div class="row">
             <div class="box1"
-                onclick="openModal('PATH-HIVE Gold Workshop', 'A two day or 16 hours spread over a couple of days like 2 hours after lunch for two weeks.', '£4000', 'End to end project management/Business Change and Transformation workshop.', 'Identify the building blocks for setting up a project’s success before work begins. Learn how to build and develop a highly successful project team.')">
+                onclick="openModal('PATH-HIVE Gold Workshop', 'A two day or 16 hours spread over a couple of days like 2 hours after lunch for two weeks.', '£4000', 'End to end project management/Business Change and Transformation workshop.', 'Identify the foundational elements crucial for project success before initiating work. Learn strategies for assembling and nurturing a high-performing project team. Gain techniques for identifying, assessing, and mitigating project risks. Develop skills to effectively communicate and collaborate with project stakeholders. Acquire leadership skills to navigate through project challenges and drive meaningful change.')">
                 <img src="assets/to-do-list.png">
                 <p>PATH-HIVE Gold Workshop</p>
             </div>
@@ -315,6 +327,12 @@
     <script>
         // Get the modal
         var modal = document.getElementById("myModal");
+        var modalContent = document.querySelector(".modal-content");
+
+        // Variables to store mouse positions
+        var mouseX, mouseY;
+        var modalLeft, modalTop;
+
 
         // Function to open the modal with specific product information
         function openModal(name, duration, price, description, benefits) {
@@ -333,12 +351,55 @@
             modal.style.display = "none";
         }
 
-        // Close the modal when clicking outside of it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
+    // Function to handle mouse down event on the modal header
+    function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // Get the initial mouse cursor position
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        // Get the initial modal position
+        modalLeft = modal.offsetLeft;
+        modalTop = modal.offsetTop;
+        // Call a function whenever the cursor moves
+        document.onmousemove = mouseMove;
+        document.onmouseup = closeDragElement;
+    }
+    
+
+    // Function to handle mouse move event
+    function mouseMove(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // Calculate the new cursor position
+        var deltaX = mouseX - e.clientX;
+        var deltaY = mouseY - e.clientY;
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        // Set the new modal position
+        modal.style.top = (modal.offsetTop - deltaY) + "px";
+        modal.style.left = (modal.offsetLeft - deltaX) + "px";
+    }
+
+    // Function to handle mouse up event
+    function closeDragElement() {
+        // Stop moving when mouse button is released
+        document.onmouseup = null;
+        document.onmousemove = null;
+    }
+
+    // Close the modal when clicking outside of it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            closeModal();
         }
+    }
+        // // Close the modal when clicking outside of it
+        // window.onclick = function (event) {
+        //     if (event.target == modal) {
+        //         modal.style.display = "none";
+        //     }
+        // }
     </script>
 </body>
 
