@@ -171,6 +171,14 @@
             /* Enable vertical scrolling */
         }
 
+        /* Style for the modal body */
+        .modal-body {
+            max-height: 300px;
+            /* Adjust as needed */
+            overflow-y: auto;
+            /* Enable vertical scrolling */
+        }
+
         /* Style for the product name in the modal */
         .modal-content h2 {
             color: rgb(128, 51, 0);
@@ -310,20 +318,22 @@
 
     <!-- The modal -->
     <div id="myModal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content" onmousedown="dragMouseDown(event)">
             <span class="close" onclick="closeModal()">&times;</span>
             <h2 id="modalProductName">Product Information</h2>
-            <p><strong>Duration:</strong> <span id="modalDuration"></span></p>
-            <p><strong>Price:</strong> <span id="modalPrice"></span></p>
-            <p><strong>Description:</strong> <span id="modalDescription"></span></p>
-            <p><strong>Benefits:</strong> <span id="modalBenefits"></span></p>
-            <p><a href="contact.html">Contact Us</a></p>
-            <p><a href="https://calendly.com/drbocktor/business-success-unveiling-the-path-methodology?month=2024-04">Book
-                    a Meeting</a></p>
+            <div class="modal-body">
+                <!-- Content here can be scrolled -->
+                <p><strong>Duration:</strong> <span id="modalDuration"></span></p>
+                <p><strong>Price:</strong> <span id="modalPrice"></span></p>
+                <p><strong>Description:</strong> <span id="modalDescription"></span></p>
+                <p><strong>Benefits:</strong> <span id="modalBenefits"></span></p>
+                <p><a href="contact.html">Contact Us</a></p>
+                <p><a
+                        href="https://calendly.com/drbocktor/business-success-unveiling-the-path-methodology?month=2024-04">Book
+                        a Meeting</a></p>
+            </div>
         </div>
     </div>
-    </div>
-
     <script>
         // Get the modal
         var modal = document.getElementById("myModal");
@@ -351,49 +361,49 @@
             modal.style.display = "none";
         }
 
-    // Function to handle mouse down event on the modal header
-    function dragMouseDown(e) {
-        e = e || window.event;
-        e.preventDefault();
-        // Get the initial mouse cursor position
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        // Get the initial modal position
-        modalLeft = modal.offsetLeft;
-        modalTop = modal.offsetTop;
-        // Call a function whenever the cursor moves
-        document.onmousemove = mouseMove;
-        document.onmouseup = closeDragElement;
-    }
-    
-
-    // Function to handle mouse move event
-    function mouseMove(e) {
-        e = e || window.event;
-        e.preventDefault();
-        // Calculate the new cursor position
-        var deltaX = mouseX - e.clientX;
-        var deltaY = mouseY - e.clientY;
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        // Set the new modal position
-        modal.style.top = (modal.offsetTop - deltaY) + "px";
-        modal.style.left = (modal.offsetLeft - deltaX) + "px";
-    }
-
-    // Function to handle mouse up event
-    function closeDragElement() {
-        // Stop moving when mouse button is released
-        document.onmouseup = null;
-        document.onmousemove = null;
-    }
-
-    // Close the modal when clicking outside of it
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            closeModal();
+        // Function to handle mouse down event on the modal header
+        function dragMouseDown(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // Get the initial mouse cursor position
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            // Get the initial modal position
+            modalLeft = modal.offsetLeft;
+            modalTop = modal.offsetTop;
+            // Call a function whenever the cursor moves
+            document.onmousemove = mouseMove;
+            document.onmouseup = closeDragElement;
         }
-    }
+
+
+        // Function to handle mouse move event
+        function mouseMove(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // Calculate the new cursor position
+            var deltaX = mouseX - e.clientX;
+            var deltaY = mouseY - e.clientY;
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            // Set the new modal position
+            modal.style.top = (modal.offsetTop - deltaY) + "px";
+            modal.style.left = (modal.offsetLeft - deltaX) + "px";
+        }
+
+        // Function to handle mouse up event
+        function closeDragElement() {
+            // Stop moving when mouse button is released
+            document.onmouseup = null;
+            document.onmousemove = null;
+        }
+
+        // Close the modal when clicking outside of it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
         // // Close the modal when clicking outside of it
         // window.onclick = function (event) {
         //     if (event.target == modal) {
