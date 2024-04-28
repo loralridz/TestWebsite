@@ -63,6 +63,8 @@
         .box {
             text-align: center;
             margin-top: 20px;
+            position: relative;
+            display: inline-block;
         }
 
         .box img {
@@ -73,15 +75,27 @@
             margin: 10px;
         }
 
-        .box p {
-            margin: 5px;
-            text-align: center;
+        .box:hover .dropdown-menu {
+            display: block;
         }
 
-        .box img:hover {
-            background-color: lightblue;
-            transform: scale(1.2);
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 120%;
+            left: 0;
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
         }
+
+        .dropdown-menu p {
+            margin: 5px 0;
+        }
+
     </style>
 </head>
 
@@ -91,50 +105,20 @@
             The PATH-HIVE business change and transformation framework is the culmination of a multidisciplinary approach, synthesizing insights from physics, business, technology, and human resources. Unlike other methodologies, PATH-HIVE prioritizes the human aspect of change, emphasizing people over technical considerations. By placing a strong emphasis on understanding human behavior and motivations, PATH-HIVE ensures that change initiatives resonate with individuals on a deeper level, leading to more sustainable and impactful transformations. With a range of products designed to serve everyone in the organization, from the executive level to entry level, PATH-HIVE focuses on shaping mindsets, cultivating habits, and preparing organizations for the inevitable transition to a project-based economy.
         </p>
         <!-- Product box -->
-        <div class="box" onclick="openModal('PATH-HIVE Gold Workshop', 'A two day or 16 hours spread over a couple of days like 2 hours after lunch for two weeks.', '£4000', 'End to end project management/Business Change and Transformation workshop.', 'Identify the foundational elements crucial for project success before initiating work. Learn strategies for assembling and nurturing a high-performing project team. Gain techniques for identifying, assessing, and mitigating project risks. Develop skills to effectively communicate and collaborate with project stakeholders. Acquire leadership skills to navigate through project challenges and drive meaningful change.')">
+        <div class="box">
             <img src="assets/to-do-list.png">
-            <p>PATH-HIVE Gold Workshop</p>
-        </div>
-    </div>
-
-    <!-- The modal -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2 id="modalProductName">Product Information</h2>
-            <div class="modal-body">
-                <p><strong>Duration:</strong> <span id="modalDuration"></span></p>
-                <p><strong>Price:</strong> <span id="modalPrice"></span></p>
-                <p><strong>Description:</strong> <span id="modalDescription"></span></p>
-                <p><strong>Benefits:</strong> <span id="modalBenefits"></span></p>
+            <div class="dropdown-menu">
+                <p><strong>Product:</strong> PATH-HIVE Gold Workshop</p>
+                <p><strong>Duration:</strong> A two day or 16 hours spread over a couple of days like 2 hours after lunch for two weeks.</p>
+                <p><strong>Price:</strong> £4000</p>
+                <p><strong>Description:</strong> End to end project management/Business Change and Transformation workshop.</p>
+                <p><strong>Benefits:</strong> Identify the foundational elements crucial for project success before initiating work. Learn strategies for assembling and nurturing a high-performing project team. Gain techniques for identifying, assessing, and mitigating project risks. Develop skills to effectively communicate and collaborate with project stakeholders. Acquire leadership skills to navigate through project challenges and drive meaningful change.</p>
                 <p><a href="contact.html">Contact Us</a></p>
                 <p><a href="https://calendly.com/drbocktor/business-success-unveiling-the-path-methodology?month=2024-04">Book a Meeting</a></p>
             </div>
         </div>
     </div>
 
-    <script>
-        var modal = document.getElementById("myModal");
-
-        function openModal(name, duration, price, description, benefits) {
-            document.getElementById("modalProductName").innerHTML = name;
-            document.getElementById("modalDuration").innerHTML = duration;
-            document.getElementById("modalPrice").innerHTML = price;
-            document.getElementById("modalDescription").innerHTML = description;
-            document.getElementById("modalBenefits").innerHTML = benefits;
-            modal.style.display = "block";
-        }
-
-        function closeModal() {
-            modal.style.display = "none";
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                closeModal();
-            }
-        }
-    </script>
 </body>
 
 <footer class="footer">
