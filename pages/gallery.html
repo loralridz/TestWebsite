@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PATH-HIVE Products</title>
+    <link rel="stylesheet" href="../styles.css">
+    <!-- <div class="left">
+        <img src="assets/logo.jpg" alt="Logo">	 -->
+    <div class="left">
+        <!-- <img src="assets/logo.jpg" alt="Logo"> -->
+        <img src="assets/logo.jpg" style="position: relative; top: 10px; left: 10px; width: 160px; height: 125px;" />
+
+    </div>
+    </div>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            /* Choose a modern and readable font */
+            line-height: 1.6;
+            /* Line height for better readability */
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            /* Soft background color */
+            color: #333;
+            /* Dark gray text color for readability */
+            text-align: start;
+        }
+
+        /* Container for main content */
+        .container {
+            width: 80%;
+            /* Adjust width as needed */
+            /* margin: 20px auto;  */
+            /* Center the content with top and bottom margin */
+            margin: 20px 0 20px 20px;
+            /* Center the content with top margin and align to the right */
+            background-color: #fff;
+            /* White background for the content */
+            padding: 20px;
+            /* Padding for space inside the container */
+            border-radius: 8px;
+            /* Rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Light shadow for depth */
+        }
+
+        /* Headings */
+        h2 {
+            color: white;
+            /* Dark blue color for headings */
+            font-size: 24px;
+            margin-bottom: 15px;
+            /* Bottom margin for spacing */
+            background-color: gray;
+        }
+
+        /* Paragraphs */
+        p {
+            margin-bottom: 15px;
+            /* Bottom margin between paragraphs */
+        }
+
+        /* Links */
+        a {
+            color: white;
+            /* Blue color for links */
+            text-decoration: none;
+            ;
+
+        }
+
+        a:hover {
+            text-decoration: underline;
+            /* Underline links on hover */
+        }
+
+        /* Styled link in the paragraph */
+        .container a {
+            display: inline-block;
+            /* Display as an inline-block element */
+            padding: 8px 12px;
+            /* Padding for the link */
+            background-color: gray;
+            /* Light blue background for the link */
+            border-radius: 5px;
+            /* Rounded corners for the link */
+            font-weight: bold;
+        }
+
+        .image-container {
+            margin: 20px auto;
+            /* Adjust margin as needed */
+            max-width: 80%;
+            /* Adjust max-width as needed */
+        }
+
+
+        .mid img {
+            width: 100%;
+            display: block;
+        }
+
+
+        .container1 {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .box1 {
+            text-align: center;
+            /* Center the content horizontally */
+            margin-top: 20px;
+            /* Add some space between each container */
+        }
+
+        .box1 img {
+            width: 100px;
+            height: 100px;
+            border: 2px dashed rgb(211, 33, 33);
+            padding: 15px;
+            margin: 10px;
+        }
+
+        .box1 p {
+            margin: 5px;
+            /* Add some margin for spacing */
+            text-align: center;
+        }
+
+        .box1 img:hover {
+            background-color: lightblue;
+            transform: scale(1.2);
+        }
+
+        /* Style for the modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            cursor: move;
+            /* Set cursor to move when hovering over the modal */
+            overflow: hidden;
+            /* Hide any content overflowing from the modal */
+        }
+
+        /* Style for the modal content */
+        .modal-content {
+            background-color: rgb(245, 238, 238);
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 0px;
+            font-family: Arial, sans-serif;
+            /* Change the font family here */
+            font-size: 18px;
+            /* Change the font size here */
+            color: rgb(102, 11, 11);
+            /* Change the text color here */
+            overflow-y: auto;
+            /* Enable vertical scrolling */
+        }
+
+        /* Style for the modal body */
+        .modal-body {
+            max-height: 300px;
+            /* Adjust as needed */
+            overflow-y: auto;
+            /* Enable vertical scrolling */
+        }
+
+        /* Style for the product name in the modal */
+        .modal-content h2 {
+            color: rgb(128, 51, 0);
+            /* Change the color of the product name here */
+        }
+
+        /* Style for the links inside the modal content */
+        .modal-content a {
+            color: blue;
+            /* Change the color of the links here */
+            text-decoration: underline;
+            /* Add underline to the links */
+        }
+
+        /* Style for the links when hovered */
+        .modal-content a:hover {
+            color: darkblue;
+            /* Change the color of the links on hover here */
+        }
+
+        /* Close button style */
+        .close {
+            color: #38ac21;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: rgb(93, 11, 11);
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="mid">
+        <!-- <img src="assets/websitepage2pic1.png" alt="Photo of a flying pigeon with a text" style="max-width: 100%; margin-left: 10px; margin-right: auto;"> -->
+        <img src="assets/PeaopleandTechnicalFramework.png" alt="PATH-HIVE Framework Focuses on People and Technical"
+            style="max-width: 100%; margin-left: 10px; margin-right: auto;">
+    </div>
+    <!-- <div class="image-container">
+        <div class="mid">
+            <img src="assets/websitepage2pic1.png" alt="Photo of a flying pigeon with a text" style="max-width: 100%; margin-left: -100 px; margin-right: auto;">
+        </div>
+    </div> -->
+    <hr>
+    <div class="container">
+
+        <p>
+            The PATH-HIVE business change and transformation framework is the culmination of a multidisciplinary
+            approach, synthesizing insights from physics, business, technology, and human resources. Unlike other
+            methodologies, PATH-HIVE prioritizes the human aspect of change, emphasizing people over technical
+            considerations. By placing a strong emphasis on understanding human behavior and motivations, PATH-HIVE
+            ensures that change initiatives resonate with individuals on a deeper level, leading to more sustainable and
+            impactful transformations. With a range of products designed to serve everyone in the organization, from the
+            executive level to entry level, PATH-HIVE focuses on shaping mindsets, cultivating habits, and preparing
+            organizations for the inevitable transition to a project-based economy.</p>
+        <!-- Product boxes -->
+
+
+    </div>
+
+    <div class="container1">
+        <div class="row">
+            <div class="box1"
+                onclick="openModal('PATH-HIVE Gold Workshop', 'A two day or 16 hours spread over a couple of days like 2 hours after lunch for two weeks.', '£4000', 'End to end project management/Business Change and Transformation workshop.', 'Identify the foundational elements crucial for project success before initiating work. Learn strategies for assembling and nurturing a high-performing project team. Gain techniques for identifying, assessing, and mitigating project risks. Develop skills to effectively communicate and collaborate with project stakeholders. Acquire leadership skills to navigate through project challenges and drive meaningful change.')">
+                <img src="assets/to-do-list.png">
+                <p>PATH-HIVE Gold Workshop</p>
+            </div>
+            <div class="box1"
+                onclick="openModal('PATH-HIVE Mini Workshop', 'A two hour workshop', ' £750', 'Consider a career in business analyis and project management ', '')">
+                <img src="assets/to-do-list.png">
+                <p>PATH-HIVE Mini Workshop</p>
+            </div>
+            <div class="box1"
+                onclick="openModal('PATH-HIVE Magic', '60 days effort, each effort day is 8 hours', '', '', '')">
+                <img src="assets/to-do-list.png">
+                <p>PATH-HIVE Magic</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="box1"
+                onclick="openModal('PATH-HIVE Legacy', '', '', '', '')">
+                <img src="assets/to-do-list.png">
+                <p>PATH-HIVE Legacy</p>
+            </div>
+            <div class="box1"
+                onclick="openModal('PATH-HIVE Team Dynamics', '', '', '', '')">
+                <img src="assets/to-do-list.png">
+                <p>PATH-HIVE Team Dynamics</p>
+            </div>
+            <div class="box1"
+                onclick="openModal(' Modern Leadership Mindset Assessment', '', '', '', '.')">
+                <img src="assets/to-do-list.png">
+                <p>PATH-HIVE Diversity Boost Workshop</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="box1"
+                onclick="openModal('PATH-HIVE Mindset Step by Step Change', '', '', '.', '')">
+                <img src="assets/to-do-list.png">
+                <p>PATH-HIVE Modern Mindset Voyage </p>
+            </div>
+            <div class="box1"
+                onclick="openModal('PATH-HIVE Invest', '', '', '.', '.')">
+                <img src="assets/to-do-list.png">
+                <p>PATH-HIVE Invest</p>
+            </div>
+            <div class="box1"
+                onclick="openModal('PATH-HIVE Challenge', '', '', '', '.')">
+                <img src="assets/to-do-list.png">
+                <p>PATH-HIVE Challenge</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="box1"
+                onclick="openModal('PATH-HIVE AI Innovate', '', '', '', '.')">
+                <img src="assets/to-do-list.png">
+                <p>PATH-HIVE AI Innovate</p>
+            </div>
+            <div class="box1"
+                onclick="openModal('PATH-HIVE Create Your Own Product', '', '', '.', '')">
+                <img src="assets/to-do-list.png">
+                <p>PATH-HIVE Create Your Own Product</p>
+            </div>
+            <div class="box1"
+                onclick="openModal('PATH-HIVE CM Maturity Assessment', '', '', '.', '')">
+                <img src="assets/to-do-list.png">
+                <p>PATH-HIVE CM Maturity Assessment</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- The modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content" onmousedown="dragMouseDown(event)">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalProductName">Product Information</h2>
+            <div class="modal-body">
+                <!-- Content here can be scrolled -->
+                <p><strong>Duration:</strong> <span id="modalDuration"></span></p>
+                <p><strong>Price:</strong> <span id="modalPrice"></span></p>
+                <p><strong>Description:</strong> <span id="modalDescription"></span></p>
+                <p><strong>Benefits:</strong> <span id="modalBenefits"></span></p>
+                <p><a href="contact.html">Contact Us</a></p>
+                <p><a
+                        href="https://calendly.com/drbocktor/business-success-unveiling-the-path-methodology?month=2024-04">Book
+                        a Meeting</a></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        var modalContent = document.querySelector(".modal-content");
+
+        // Variables to store mouse positions
+        var mouseX, mouseY;
+        var modalLeft, modalTop;
+
+
+        // Function to open the modal with specific product information
+        function openModal(name, duration, price, description, benefits) {
+            // Set the product information in the modal
+            document.getElementById("modalProductName").innerHTML = name;
+            document.getElementById("modalDuration").innerHTML = duration;
+            document.getElementById("modalPrice").innerHTML = price;
+            document.getElementById("modalDescription").innerHTML = description;
+            document.getElementById("modalBenefits").innerHTML = benefits;
+            // Display the modal
+            modal.style.display = "block";
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        // Function to handle mouse down event on the modal header
+        function dragMouseDown(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // Get the initial mouse cursor position
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            // Get the initial modal position
+            modalLeft = modal.offsetLeft;
+            modalTop = modal.offsetTop;
+            // Call a function whenever the cursor moves
+            document.onmousemove = mouseMove;
+            document.onmouseup = closeDragElement;
+        }
+
+
+        // Function to handle mouse move event
+        function mouseMove(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // Calculate the new cursor position
+            var deltaX = mouseX - e.clientX;
+            var deltaY = mouseY - e.clientY;
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            // Set the new modal position
+            modal.style.top = (modal.offsetTop - deltaY) + "px";
+            modal.style.left = (modal.offsetLeft - deltaX) + "px";
+        }
+
+        // Function to handle mouse up event
+        function closeDragElement() {
+            // Stop moving when mouse button is released
+            document.onmouseup = null;
+            document.onmousemove = null;
+        }
+
+        // Close the modal when clicking outside of it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+        // // Close the modal when clicking outside of it
+        // window.onclick = function (event) {
+        //     if (event.target == modal) {
+        //         modal.style.display = "none";
+        //     }
+        // }
+    </script>
+</body>
+
+
+<footer class="footer">
+    <p>PATH-HIVE | TRANSFORMING ORGANIZATIONS</p>
+</footer>
+</html>
