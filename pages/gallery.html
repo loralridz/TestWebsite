@@ -75,23 +75,28 @@
             margin: 10px;
         }
 
+        .box:hover .dropdown-menu {
+            display: block;
+        }
+
         .dropdown-menu {
             display: none;
             position: absolute;
             top: 120%;
-            left: 50%;
-            transform: translateX(-50%);
+            left: 0;
             background-color: #fff;
-            padding: 20px;
+            padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            width: 300px; /* Set width of dropdown */
+            max-height: 200px;
+            /* Example maximum height */
+            overflow-y: auto;
         }
 
         .dropdown-menu p {
-            margin: 10px 0;
+            margin: 5px 0;
         }
     </style>
 </head>
@@ -99,32 +104,38 @@
 <body>
     <div class="container">
         <p>
-            The PATH-HIVE business change and transformation framework is the culmination of a multidisciplinary approach, synthesizing insights from physics, business, technology, and human resources. Unlike other methodologies, PATH-HIVE prioritizes the human aspect of change, emphasizing people over technical considerations. By placing a strong emphasis on understanding human behavior and motivations, PATH-HIVE ensures that change initiatives resonate with individuals on a deeper level, leading to more sustainable and impactful transformations. With a range of products designed to serve everyone in the organization, from the executive level to entry level, PATH-HIVE focuses on shaping mindsets, cultivating habits, and preparing organizations for the inevitable transition to a project-based economy.
+            The PATH-HIVE business change and transformation framework is the culmination of a multidisciplinary
+            approach, synthesizing insights from physics, business, technology, and human resources. Unlike other
+            methodologies, PATH-HIVE prioritizes the human aspect of change, emphasizing people over technical
+            considerations. By placing a strong emphasis on understanding human behavior and motivations, PATH-HIVE
+            ensures that change initiatives resonate with individuals on a deeper level, leading to more sustainable and
+            impactful transformations. With a range of products designed to serve everyone in the organization, from the
+            executive level to entry level, PATH-HIVE focuses on shaping mindsets, cultivating habits, and preparing
+            organizations for the inevitable transition to a project-based economy.
         </p>
         <!-- Product box -->
-        <div class="box" onmouseover="showDropdownMenu()" onmouseout="hideDropdownMenu()">
+        <div class="box">
             <img src="assets/to-do-list.png">
-            <div class="dropdown-menu" id="dropdownMenu">
+            <div class="dropdown-menu">
                 <p><strong>Product:</strong> PATH-HIVE Gold Workshop</p>
-                <p><strong>Duration:</strong> A two day or 16 hours spread over a couple of days like 2 hours after lunch for two weeks.</p>
+                <p><strong>Duration:</strong> A two day or 16 hours spread over a couple of days like 2 hours after
+                    lunch for two weeks.</p>
                 <p><strong>Price:</strong> £4000</p>
-                <p><strong>Description:</strong> End to end project management/Business Change and Transformation workshop.</p>
-                <p><strong>Benefits:</strong> Identify the foundational elements crucial for project success before initiating work. Learn strategies for assembling and nurturing a high-performing project team. Gain techniques for identifying, assessing, and mitigating project risks. Develop skills to effectively communicate and collaborate with project stakeholders. Acquire leadership skills to navigate through project challenges and drive meaningful change.</p>
+                <p><strong>Description:</strong> End to end project management/Business Change and Transformation
+                    workshop.</p>
+                <p><strong>Benefits:</strong> Identify the foundational elements crucial for project success before
+                    initiating work. Learn strategies for assembling and nurturing a high-performing project team. Gain
+                    techniques for identifying, assessing, and mitigating project risks. Develop skills to effectively
+                    communicate and collaborate with project stakeholders. Acquire leadership skills to navigate through
+                    project challenges and drive meaningful change.</p>
                 <p><a href="contact.html">Contact Us</a></p>
-                <p><a href="https://calendly.com/drbocktor/business-success-unveiling-the-path-methodology?month=2024-04">Book a Meeting</a></p>
+                <p><a
+                        href="https://calendly.com/drbocktor/business-success-unveiling-the-path-methodology?month=2024-04">Book
+                        a Meeting</a></p>
             </div>
         </div>
     </div>
 
-    <script>
-        function showDropdownMenu() {
-            document.getElementById("dropdownMenu").style.display = "block";
-        }
-
-        function hideDropdownMenu() {
-            document.getElementById("dropdownMenu").style.display = "none";
-        }
-    </script>
 </body>
 
 <footer class="footer">
