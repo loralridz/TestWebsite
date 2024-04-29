@@ -336,81 +336,74 @@
     </div>
     <script>
         // Get the modal
-        var modal = document.getElementById("myModal");
-        var modalContent = document.querySelector(".modal-content");
+var modal = document.getElementById("myModal");
+var modalContent = document.querySelector(".modal-content");
 
-        // Variables to store mouse positions
-        var mouseX, mouseY;
-        var modalLeft, modalTop;
+// Variables to store mouse positions
+var mouseX, mouseY;
+var modalLeft, modalTop;
+
+// Function to open the modal with specific product information
+function openModal(name, duration, price, description, benefits) {
+    // Set the product information in the modal
+    document.getElementById("modalProductName").innerHTML = name;
+    document.getElementById("modalDuration").innerHTML = duration;
+    document.getElementById("modalPrice").innerHTML = price;
+    document.getElementById("modalDescription").innerHTML = description;
+    document.getElementById("modalBenefits").innerHTML = benefits;
+    // Display the modal
+    modal.style.display = "block";
+}
+
+// Function to close the modal
+function closeModal() {
+    modal.style.display = "none";
+}
+
+// Function to handle mouse down event on the modal header
+function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // Get the initial mouse cursor position
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    // Get the initial modal position
+    modalLeft = modal.offsetLeft;
+    modalTop = modal.offsetTop;
+    // Call a function whenever the cursor moves
+    document.onmousemove = mouseMove;
+    document.onmouseup = closeDragElement;
+}
+
+// Function to handle mouse move event
+function mouseMove(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // Calculate the new cursor position
+    var deltaX = mouseX - e.clientX;
+    var deltaY = mouseY - e.clientY;
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    // Set the new modal position
+    modal.style.top = (modal.offsetTop - deltaY) + "px";
+    modal.style.left = (modal.offsetLeft - deltaX) + "px";
+}
+
+// Function to handle mouse up event
+function closeDragElement() {
+    // Stop moving when mouse button is released
+    document.onmouseup = null;
+    document.onmousemove = null;
+}
+
+// Close the modal when clicking outside of it
+window.onclick = function (event) {
+    if (event.target == modal) {
+        closeModal();
+    }
+}
 
 
-        // Function to open the modal with specific product information
-        function openModal(name, duration, price, description, benefits) {
-            // Set the product information in the modal
-            console.log ("openModal")
-            document.getElementById("modalProductName").innerHTML = name;
-            document.getElementById("modalDuration").innerHTML = duration;
-            document.getElementById("modalPrice").innerHTML = price;
-            document.getElementById("modalDescription").innerHTML = description;
-            document.getElementById("modalBenefits").innerHTML = benefits;
-            // Display the modal
-            modal.style.display = "block";
-        }
-
-        // Function to close the modal
-        function closeModal() {
-            modal.style.display = "none";
-        }
-
-        // Function to handle mouse down event on the modal header
-        function dragMouseDown(e) {
-            e = e || window.event;
-            e.preventDefault();
-            // Get the initial mouse cursor position
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-            // Get the initial modal position
-            modalLeft = modal.offsetLeft;
-            modalTop = modal.offsetTop;
-            // Call a function whenever the cursor moves
-            document.onmousemove = mouseMove;
-            document.onmouseup = closeDragElement;
-        }
-
-
-        // Function to handle mouse move event
-        function mouseMove(e) {
-            e = e || window.event;
-            e.preventDefault();
-            // Calculate the new cursor position
-            var deltaX = mouseX - e.clientX;
-            var deltaY = mouseY - e.clientY;
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-            // Set the new modal position
-            modal.style.top = (modal.offsetTop - deltaY) + "px";
-            modal.style.left = (modal.offsetLeft - deltaX) + "px";
-        }
-
-        // Function to handle mouse up event
-        function closeDragElement() {
-            // Stop moving when mouse button is released
-            document.onmouseup = null;
-            document.onmousemove = null;
-        }
-
-        // Close the modal when clicking outside of it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                closeModal();
-            }
-        }
-        // // Close the modal when clicking outside of it
-        // window.onclick = function (event) {
-        //     if (event.target == modal) {
-        //         modal.style.display = "none";
-        //     }
-        // }
     </script>
 </body>
 

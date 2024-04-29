@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box1">
+    <img src="assets/to-do-list.png" onclick="openModal('PATH-HIVE AI Innovate', '5minn', 'm', 'm', 'm')">
+    <p>PATH-HIVE AI Innovate</p>
+</div>
+<!-- The modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content" onmousedown="dragMouseDown(event)">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalProductName">Product Information</h2>
+        <div class="modal-body">
+            <!-- Content here can be scrolled -->
+            <p><strong>Duration:</strong> <span id="modalDuration"></span></p>
+            <p><strong>Price:</strong> <span id="modalPrice"></span></p>
+            <p><strong>Description:</strong> <span id="modalDescription"></span></p>
+            <p><strong>Benefits:</strong> <span id="modalBenefits"></span></p>
+            <p><a href="contact.html">Contact Us</a></p>
+            <p><a
+                    href="https://calendly.com/drbocktor/business-success-unveiling-the-path-methodology?month=2024-04">Book
+                    a Meeting</a></p>
+        </div>
+    </div>
+</div>
+    <script>
+
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        var modalContent = document.querySelector(".modal-content");
+
+        // Variables to store mouse positions
+        var mouseX, mouseY;
+        var modalLeft, modalTop;
+
+
+        // Function to open the modal with specific product information
+        function openModal(name, duration, price, description, benefits) {
+            // Set the product information in the modal
+            console.log ("openModal")
+            document.getElementById("modalProductName").innerHTML = name;
+            document.getElementById("modalDuration").innerHTML = duration;
+            document.getElementById("modalPrice").innerHTML = price;
+            document.getElementById("modalDescription").innerHTML = description;
+            document.getElementById("modalBenefits").innerHTML = benefits;
+            // Display the modal
+            modal.style.display = "block";
+        }
+    </script>
+</body>
+</html>
