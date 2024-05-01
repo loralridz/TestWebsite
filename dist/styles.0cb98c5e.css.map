@@ -1,1 +1,0 @@
-{"version":3,"sources":["styles.css"],"names":[],"mappings":"AACA,KACE,sBAAuB,CACvB,aACF","file":"styles.0cb98c5e.css","sourceRoot":"..","sourcesContent":["/* А тут CSS */\nbody {\n  font-family: sans-serif;\n  color: darkblue;\n}\n"]}
